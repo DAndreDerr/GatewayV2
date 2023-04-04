@@ -12,9 +12,10 @@ nav ul { /* code for the List that makes up nav bar*/
   
 
 #navname {
+  /* change */
     display: block; /*displays element with block properties*/
     float: left; /*positions to the right of container*/
-    width: 40%;
+    width: 40%; 
     font-family: Brush Script MT; 
     color: orange; 
   }
