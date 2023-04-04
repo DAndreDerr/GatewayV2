@@ -1,0 +1,263 @@
+body {  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #c01b24;
+  }
+
+  
+nav ul { /* code for the List that makes up nav bar*/
+      list-style-type: none; /*gets rid of bullet points*/
+      overflow: hidden; /*keeps nav content inside container*/
+  }
+  
+
+#navname {
+    display: block; /*displays element with block properties*/
+    float: left; /*positions to the right of container*/
+    width: 40%;
+    font-family: Brush Script MT; 
+    color: orange; 
+  }
+  
+nav a { /*all code for the anchors in nav bar*/
+      float: right; /*postions the nav anchors to the left of container*/
+      display: block; /*displays element with block properties*/
+      color: white;
+      text-align: center; /*centers text*/
+      padding: 1vw; 
+      text-decoration: none; /*removes text decoration (bullet points)*/
+  }
+  
+nav a:hover { /*impacts the properties when hovering over an anchor in nav*/
+      background-color: #e4da6c;
+  }
+  
+.social-icons {
+    text-align: center;
+  }
+  
+.social-icons img { /*code for social media images*/
+    width: 4vw;
+    height: auto;
+    margin: 1vw;
+  }
+
+  /* below is code specifically for Home*/
+  .heroimg {
+    display: flex;
+    flex-direction: column;
+    background-image: url(Heroimg-_1_.webp);
+    height: 85vh;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .herotext { /*All code for text that goes on top of hero image*/
+    position: absolute; /*makes position fixed to where I put it*/
+    max-width: 60vw;
+    height: 50vh;
+    top: 25%; /*positions it 30% the size of the page from the top*/
+    right: 20%; /*positions it a third of the page from the right size*/
+    color: white;
+    text-align: center;
+    background-color: #c01b24;
+    border-radius: 10px; /*rounds the borders edges*/
+    border-style: solid; /*Makes border solid line*/
+  }
+
+  .herotext a {
+    text-decoration: none; /*gets rid of link decoration (underline)*/
+    color: white; /*changes link text color*/
+  }
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    margin: 5px;
+}
+
+
+
+
+.menu {
+    padding: 0 10px 30px 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+}
+
+.fooditem {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
+    transition: .2s ease-in-out;
+    width:250px;
+    height: auto;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+
+.fooditem img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.fooditem p {
+    margin: 2px;
+}
+
+input[type=text], input[type=number], textarea {
+  width: 100%; /*sets form to take up whole page*/
+  padding: 10px; /*sets padding around the text in each submission box*/
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical /*Allows for resizing of text area vertically*/
+}
+
+input[type=submit] { /*styling code for submit button*/
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /*changes cursor to pointer when interacting*/
+}
+
+input[type=submit]:hover {
+  background-color: lightgreen; /*changes the color of submit button when hovered over*/
+}
+
+.contactcontainer { /*container for whole form*/
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+  @media (min-width:300px) {
+    #navname {
+        font-size: 16px;
+      }
+    nav a { /*all code for the anchors in nav bar*/
+        padding: 1vw; 
+        font-size: 13px;
+    }
+
+    .social-icons img { /*code for social media images*/
+        width: auto;
+        height: 40px;
+        margin: 1vw;
+      }
+
+      .herotext { /*All code for text that goes on top of hero image*/
+        max-width: 80vw;
+        height: auto;
+        top: 25vh; /*positions it 30% the size of the page from the top*/
+        right: 10%; /*positions it a third of the page from the right size*/
+        font-size: 2.5vh;
+      }
+
+      .menu {
+        grid-template-columns: repeat(auto-fit,minmax(95vw,1fr));
+    }
+
+    .fooditem {
+        width:95vw;
+        font-size: 14px;
+    }
+
+  }
+
+  @media (min-width:768px) {
+    #navname {
+        font-size: 30px;
+      }
+    nav a { /*all code for the anchors in nav bar*/
+        padding: 1vw; 
+        font-size: 20px;
+    }
+
+    .social-icons img { /*code for social media images*/
+        width: auto;
+        height: 60px;
+      }
+
+      .herotext { /*All code for text that goes on top of hero image*/
+        max-width: 60vw;
+        top: 25vh; /*positions it 30% the size of the page from the top*/
+        right: 20%; /*positions it a third of the page from the right size*/
+        font-size: 2.5vh;
+      }
+
+      .menu {
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    }
+
+    .fooditem {
+        width:350px;
+        font-size: 16px;
+    }
+  }
+
+  @media (min-width:1024px) {
+    .herotext { /*All code for text that goes on top of hero image*/
+        max-width: 40vw;
+        top: 25vh; /*positions it 30% the size of the page from the top*/
+        right: 30%; /*positions it a third of the page from the right size*/
+        font-size: 2.5vh;
+      }
+      .heroimg {
+        height: 77vh;
+      }
+      .social-icons img { /*code for social media images*/
+        width: auto;
+        height: 40px;
+      }
+      .menu {
+        grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+    }
+
+    .fooditem {
+        width:225px;
+        font-size: 16px;
+    }
+    
+  }
+
+  @media (min-width:1224px) {
+    .herotext { /*All code for text that goes on top of hero image*/
+        max-width: 30vw;
+        top: 25vh; /*positions it 30% the size of the page from the top*/
+        right: 35%; /*positions it a third of the page from the right size*/
+        font-size: 2.5vh;
+      }
+      .menu {
+        grid-template-columns: repeat(auto-fit,minmax(285px,1fr));
+    }
+
+    .fooditem {
+        width:285px;
+        font-size: 16px;
+    }
+  }
